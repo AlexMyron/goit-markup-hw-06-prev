@@ -409,8 +409,8 @@
           </ul>
         </div>
         <form class="sign-up-form">
-          <label class="slogan" for="email">Подпишитесь на рассылку</label>
-          <input type="email" class="email" name="email" id="email" placeholder="Email">
+          <label class="slogan" for="email-sign-up">Подпишитесь на рассылку</label>
+          <input type="email" class="email" name="email" id="email-sign-up" placeholder="Email">
           <button class="send-button" type="submit">
             <div class="in-button">
               Подписаться
@@ -431,6 +431,31 @@
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
+
+        <form class="modal-form">
+          <b class="form-title">Оставьте свои данные, мы вам перезвоним</b>
+          <div class="form-field">
+            <label for="name">Имя</label>
+            <input type="name" class="form-input" name="name" id="name">
+          </div>
+          <div class="form-field">
+            <label for="phone">Телефон</label>
+            <input type="tel" class="form-input" name="phone" id="phone">
+          </div>
+          <div class="form-field">
+            <label for="email">Почта</label>
+            <input type="email" class="form-input" name="email" id="email">
+          </div>
+          <div class="form-field comment">
+            <label for="comment">Комментарий</label>
+            <textarea name="comment" id="comment" placeholder="Введите текст" cols="30" rows="10"></textarea>
+          </div>
+          <div class="form-field check">
+            <input type="checkbox" id="policy">
+            <label for="policy">Соглашаюсь с рассылкой и принимаю <a href="#">Условия договора</a></label>
+          </div>
+          <button type="submit" class="form-button">Отправить</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
