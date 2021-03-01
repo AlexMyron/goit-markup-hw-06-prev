@@ -800,12 +800,14 @@ textarea::placeholder {
   margin-right: 7px;
   border-radius: 2px;
   border: 2px solid var(--secondary-color);
+
+  transition: background var(--duration) var(--timing-function);
 }
 
 .input-check:checked + .checkbox {
   background-color: var(--accent-color);
   background-origin: border-box;
-  border: transparent;
+  border: 2px solid var(--accent-color);
   background-image: url(../images/icon-check.svg);
   background-size: contain;
 }
