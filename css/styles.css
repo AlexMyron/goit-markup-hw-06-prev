@@ -241,6 +241,7 @@ a.logo > span {
   line-height: 1.87;
   letter-spacing: 0.06em;
   text-decoration: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   cursor: pointer;
 }
@@ -683,6 +684,7 @@ a.logo > span {
 
 /* === modal form === */
 .form-title {
+  display: block;
   margin-bottom: 12px;
 
   font-weight: 700;
@@ -695,13 +697,15 @@ a.logo > span {
 }
 
 .form-field {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
 }
 
-.form-field input {
+.form-field .form-input {
   height: 40px;
+  padding-left: 42px;
 
   border: 1px solid var(--input-border-color);
   border-radius: 4px;
@@ -719,7 +723,7 @@ a.logo > span {
   margin-bottom: 20px;
 }
 
-.form-field.check {
+.form-field.box {
   margin-bottom: 30px;
   flex-direction: row;
   align-items: center;
@@ -739,15 +743,7 @@ textarea::placeholder {
   color: var(--primary-color-50);
 }
 
-.form-field input[type='checkbox'] {
-  width: 16px;
-  height: 15px;
-  margin-right: 8px;
-
-  border-color: var(--secondary-color);
-}
-
-.form-field.check label {
+.form-field.box label {
   margin-bottom: 0;
 
   font-size: 14px;
@@ -762,8 +758,56 @@ textarea::placeholder {
   padding: 10px 56px;
 }
 
-.form-input {
-  /* background-image: url(../images/icons.svg#icon-person-black); */
+/* === form icons === */
+.form-icon {
+  position: absolute;
+  bottom: 11px;
+  left: 12px;
+  width: 18px;
+  height: 18px;
+
+  fill: var(--secondary-color);
+}
+
+.form-input:focus + .form-icon {
+  fill: var(--accent-color);
+}
+
+/* === checkbox === */
+.form-field input[type='checkbox'] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.form-field.box > .label-check {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+  border-radius: 2px;
+  border: 2px solid var(--secondary-color);
+}
+
+.input-check:checked + .checkbox {
+  background-color: var(--accent-color);
+  background-origin: border-box;
+  border: transparent;
+  background-image: url(../images/icon-check.svg);
+  background-size: contain;
 }
 
 /* _________________ */

@@ -373,7 +373,7 @@
           </address>
         </div>
         <div class="footer-social">
-          <h2 class="slogan">Присоединяйтесь</h2>
+          <b class="slogan">Присоединяйтесь</b>
           <ul class="social-list">
             <li class="item">
               <a href="" class="link footer-link">
@@ -437,22 +437,34 @@
           <div class="form-field">
             <label for="name">Имя</label>
             <input type="name" class="form-input" name="name" id="name">
+            <svg class="form-icon" width="18">
+              <use href="./images/icons.svg#icon-person"></use>
+            </svg>
           </div>
           <div class="form-field">
             <label for="phone">Телефон</label>
             <input type="tel" class="form-input" name="phone" id="phone">
+            <svg class="form-icon" width="18">
+              <use href="./images/icons.svg#icon-phone"></use>
+            </svg>
           </div>
           <div class="form-field">
             <label for="email">Почта</label>
             <input type="email" class="form-input" name="email" id="email">
+            <svg class="form-icon" width="18">
+              <use href="./images/icons.svg#icon-email"></use>
+            </svg>
           </div>
           <div class="form-field comment">
             <label for="comment">Комментарий</label>
             <textarea name="comment" id="comment" placeholder="Введите текст" cols="30" rows="10"></textarea>
           </div>
-          <div class="form-field check">
-            <input type="checkbox" id="policy">
-            <label for="policy">Соглашаюсь с рассылкой и принимаю <a href="#">Условия договора</a></label>
+          <div class="form-field box">
+            <label class="label-check">
+              <input type="checkbox" class="input-check">
+              <span class="checkbox"></span>
+              Соглашаюсь с рассылкой и принимаю&ensp;<a href="#">Условия договора</a>
+            </label>
           </div>
           <button type="submit" class="form-button">Отправить</button>
         </form>
