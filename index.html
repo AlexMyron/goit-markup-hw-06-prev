@@ -25,14 +25,14 @@
         <ul class="header-address">
           <li class="address-item">
             <a class="link" href="mailto:info@devstudio.com" title="info@devstudio.com">
-              <svg class="address-icon" width="16" hight="12">
+              <svg class="address-icon" width="16">
                 <use href="./images/icons.svg#icon-envelope"></use>
               </svg>info@devstudio.com
             </a>
           </li>
           <li class="address-item">
             <a class="link" href="tel:+380961111111" title="+38 096 111 11 11">
-              <svg class="address-icon phone" width="10" hight="16">
+              <svg class="address-icon phone" width="10">
                 <use href="./images/icons.svg#icon-smartphone"></use>
               </svg>+38 096 111 11 11</a>
           </li>
@@ -412,12 +412,12 @@
           <label class="slogan" for="email-sign-up">Подпишитесь на рассылку</label>
           <input type="email" class="email" name="email" id="email-sign-up" placeholder="Email">
           <button class="send-button" type="submit">
-            <div class="in-button">
+            <span class="in-button">
               Подписаться
               <svg class="icon-send-button" width="24" height="24">
                 <use href="./images/icons.svg#icon-send"></use>
               </svg>
-            </div>
+            </span>
           </button>
         </form>
       </div>
@@ -436,7 +436,7 @@
           <b class="form-title">Оставьте свои данные, мы вам перезвоним</b>
           <div class="form-field">
             <label for="name">Имя</label>
-            <input type="name" class="form-input" name="name" id="name">
+            <input type="text" class="form-input" name="name" id="name">
             <svg class="form-icon" width="18">
               <use href="./images/icons.svg#icon-person"></use>
             </svg>
@@ -457,12 +457,11 @@
           </div>
           <div class="form-field comment">
             <label for="comment">Комментарий</label>
-            <textarea name="comment" id="comment" placeholder="Введите текст" cols="30" rows="10"></textarea>
+            <textarea name="comment" id="comment" class="textarea" placeholder="Введите текст" cols="30" rows="10"></textarea>
           </div>
           <div class="form-field box">
-            <label class="label-check">
-              <input type="checkbox" class="input-check">
-              <span class="checkbox"></span>
+            <input type="checkbox" class="input-check" id="checkbox">
+            <label class="label-check" for="checkbox">
               Соглашаюсь с рассылкой и принимаю&ensp;<a href="#">Условия договора</a>
             </label>
           </div>

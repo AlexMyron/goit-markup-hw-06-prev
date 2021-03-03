@@ -596,6 +596,10 @@ a.logo > span {
   margin-right: 0;
 }
 
+.send-button:active {
+  animation: splash var(--duration) linear;
+}
+
 .in-button {
   display: flex;
   align-items: center;
@@ -711,6 +715,15 @@ a.logo > span {
 
   border: 1px solid var(--input-border-color);
   border-radius: 4px;
+
+  transition: border-color var(--duration) var(--timing-function);
+}
+
+.form-field .form-input:hover,
+.form-field .form-input:focus,
+.form-field .textarea:hover,
+.form-field .textarea:focus {
+  border-color: var(--accent-color);
 }
 
 .form-field label {
@@ -731,7 +744,7 @@ a.logo > span {
   align-items: center;
 }
 
-textarea {
+.textarea {
   resize: none;
   width: 100%;
   height: 120px;
@@ -739,9 +752,11 @@ textarea {
 
   border: 1px solid var(--input-border-color);
   border-radius: 4px; 
+
+  transition: border-color var(--duration) var(--timing-function);
 }
 
-textarea::placeholder {
+.textarea::placeholder {
   color: var(--primary-color-50);
 }
 
@@ -776,38 +791,24 @@ textarea::placeholder {
 }
 
 /* === checkbox === */
-.form-field input[type='checkbox'] {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+.input-check {
+  margin-right: 7px;
 }
 
-.form-field.box > .label-check {
-  display: flex;
-  align-items: center;
-}
-
-.checkbox {
+.input-check::before {
+  content: '';
   display: inline-block;
   width: 16px;
   height: 15px;
-  margin-right: 7px;
+
   border-radius: 2px;
   border: 2px solid var(--secondary-color);
+  background-color: var(--main-body-bg-color);
 
-  transform: scale(1);
   transition: background-color var(--duration) var(--timing-function);
 }
 
-.input-check:checked + .checkbox {
+.input-check:checked::before {
   background-color: var(--accent-color);
   background-origin: border-box;
   border: 2px solid var(--accent-color);
