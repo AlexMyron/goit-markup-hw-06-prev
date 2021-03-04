@@ -425,8 +425,6 @@ a.logo > span {
 .social-list .link:focus {
   background-color: var(--accent-color);
   color: var(--white-color);
-
-  animation: splash var(--duration) linear;
 }
 
 .social-icon {
