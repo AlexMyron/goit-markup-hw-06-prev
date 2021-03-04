@@ -4,8 +4,11 @@
   --secondary-color: #212121;
   --accent-color: #2196F3;
   --accent-color-90: #2196f3e6;
+  --accent-button-hover: #188CE8;
   --white-color: #ffffff;
   --logo-color: #000000;
+  --input-color: #000000;
+  --close-button-border-color: rgba(0, 0, 0, 0.1);
   --contact-link-color: rgba(255, 255, 255, 0.6);
   --sign-up-border-color: rgba(255, 255, 255, 0.3);
   --hero-footer-bg-color: #2F303A;
@@ -596,10 +599,6 @@ a.logo > span {
   margin-right: 0;
 }
 
-.send-button:active {
-  animation: splash var(--duration) linear;
-}
-
 .in-button {
   display: flex;
   align-items: center;
@@ -664,23 +663,33 @@ a.logo > span {
 
 .close-button {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   top: 8px;
   right: 8px;
-  display: block;
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
   padding: 0;
   margin: 0;
   
-  border: none;
+  border: 1px solid var(--close-button-border-color);
+  border-radius: 50%;
   background-color: transparent;
   cursor: pointer;
 }
 
 .close-icon {
-  width: 30px;
-  height: 30px;
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
 }
+
+.close-button:hover,
+.close-button:focus {
+  color: var(--accent-color);
+} 
 
 .is-hidden {
   visibility: none;
@@ -703,16 +712,19 @@ a.logo > span {
 }
 
 .form-field {
-  position: relative;
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
+
+  color: var(--secondary-color)
 }
 
 .form-field .form-input {
+  width: 100%;
   height: 40px;
   padding-left: 42px;
 
+  color: var(--input-color);
   border: 1px solid var(--input-border-color);
   border-radius: 4px;
 
@@ -739,7 +751,9 @@ a.logo > span {
 }
 
 .form-field.box {
+  position: relative;
   margin-bottom: 30px;
+  padding-left: 24px;
   flex-direction: row;
   align-items: center;
 }
@@ -775,61 +789,83 @@ a.logo > span {
   padding: 10px 56px;
 }
 
+.form-button:hover,
+.form-button:focus {
+  background-color: var(--accent-button-hover);
+}
+
 /* === form icons === */
+.form-field .input-wrapper {
+  position: relative;
+}
+
 .form-icon {
   position: absolute;
-  bottom: 11px;
+  top: 50%;
   left: 12px;
   width: 18px;
   height: 18px;
 
-  fill: var(--secondary-color);
+  fill: currentColor;
+
+  transform: translateY(-50%);
+  transition: fill var(--duration) var(--timing-function);
 }
 
+.form-icon:hover {
+  fill: var(--accent-color);
+}
+
+.form-input:hover + .form-icon,
 .form-input:focus + .form-icon {
   fill: var(--accent-color);
 }
 
 /* === checkbox === */
-.input-check {
-  margin-right: 7px;
-}
-
-.input-check::before {
-  content: '';
-  display: inline-block;
+.check-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 16px;
   height: 15px;
-
+  border: 1px solid var(--secondary-color);
   border-radius: 2px;
-  border: 2px solid var(--secondary-color);
-  background-color: var(--main-body-bg-color);
 
-  transition: background-color var(--duration) var(--timing-function);
+  cursor: pointer;
+
+  transform: translateY(-50%);
+  transition: background var(--duration) var(--timing-function);
+  
 }
 
-.input-check:checked::before {
-  background-color: var(--accent-color);
-  background-origin: border-box;
-  border: 2px solid var(--accent-color);
-  background-image: url(../images/icon-check.svg);
-  background-size: contain;
+.check-icon {
+  width: 16px;
+  height: 15px;
+}
 
-  animation: splash var(--duration) linear;
+
+.input-check:checked + .check-wrapper {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+
+  animation: splash var(--duration) var(--timing-function);
 }
 
 /* === animation === */
 @keyframes splash {
   0% {
-    transform: scale(1);
+    transform: scale(1) translateY(-50%);
   }
 
   50% {
-    transform: scale(1.3);
+    transform: scale(1.3) translateY(-50%);
   }
 
   100% {
-    transform: scale(1);
+    transform: scale(1) translateY(-50%);
   }
 }
 
