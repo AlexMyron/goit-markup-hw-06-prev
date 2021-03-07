@@ -838,7 +838,7 @@ a.logo > span {
   cursor: pointer;
 
   transform: translateY(-50%);
-  transition: background var(--duration) var(--timing-function);
+  transition: background-color var(--duration) var(--timing-function);
   
 }
 
@@ -851,9 +851,17 @@ a.logo > span {
 .input-check:checked + .check-wrapper {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
-
+  
   animation: splash var(--duration) var(--timing-function);
 }
+
+.input-check:focus + .check-wrapper,
+.input-check:hover + .check-wrapper {
+  border-color: var(--accent-color);
+  outline: 1px solid var(--accent-color);
+  
+}
+
 
 /* === animation === */
 @keyframes splash {
