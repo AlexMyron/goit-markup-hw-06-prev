@@ -858,8 +858,8 @@ a.logo > span {
 .input-check:focus + .check-wrapper,
 .input-check:hover + .check-wrapper {
   border-color: var(--accent-color);
-  outline: 1px solid var(--accent-color);
-  
+  box-shadow: 0px 0px 0px 1px var(--accent-color-90);
+  ;  
 }
 
 
