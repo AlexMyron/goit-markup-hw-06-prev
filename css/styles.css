@@ -690,6 +690,10 @@ a.logo > span {
   color: var(--accent-color);
 } 
 
+.close-button:active {
+  animation: close-button var(--duration) var(--timing-function);
+}
+
 .is-hidden {
   visibility: none;
   opacity: 0;
@@ -875,6 +879,20 @@ a.logo > span {
 
   100% {
     transform: scale(1) translateY(-50%);
+  }
+}
+
+@keyframes close-button {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
   }
 }
 
