@@ -158,9 +158,16 @@ a.logo > span {
   margin-left: 50px;
 }
 
+.header-address .address-item {
+  height: 100%;
+}
+
 .address-item .link {
   display: flex;
   align-items: center;
+  height: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
 
   font-weight: 500;
   font-size: 14px;
@@ -170,7 +177,8 @@ a.logo > span {
   color: var(--primary-color);
 }
 
-.address-item > .link:hover, .address-item > .link:focus {
+.address-item > .link:hover,
+.address-item > .link:focus {
   color: var(--accent-color);
 }
 
