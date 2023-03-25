@@ -13,8 +13,7 @@
   }
   
   function handleKeyUp(e) {
-    alert(e.key);
-    alert(e.code);
+    alert(JSON.stringify(e));
   }
   
   const kinput = document.getElementById('kinput');
