@@ -14,6 +14,7 @@
   
   function handleKeyUp(e) {
     alert(JSON.stringify(e));
+    console.dir(e)
   }
   
   const kinput = document.getElementById('kinput');
