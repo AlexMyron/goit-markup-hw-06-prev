@@ -15,7 +15,7 @@
   function handleKeyUp(e) {
     console.dir(e)
     
-    document.getElementById('keyValue').innerText = 'Key: ' + e.code;
+    document.getElementById('keyValue').innerText = 'Key: ' + e.keyCode;
     
 //     if (e.key === 'Enter') location = 'https://google.com';
   }
