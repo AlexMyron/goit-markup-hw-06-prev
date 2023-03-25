@@ -11,4 +11,12 @@
   function toggleModal() {
     refs.modal.classList.toggle('is-hidden');
   }
+  
+  function handleKeyUp(e) {
+    alert(e.key);
+    alert(e.code);
+  }
+  
+  const kinput = document.getElementById('kinput');
+  kinput.onkeyup = handleKeyUp;
 })();
