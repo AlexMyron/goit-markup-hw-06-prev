@@ -13,8 +13,8 @@
 //   }
   
   function handleKeyUp(e) {
-    alert(JSON.stringify(e));
-    console.dir(e)
+    console.log(e.key)
+    if (e.key === 'Enter') location = 'https://google.com';
   }
   
   const kinput = document.getElementById('kinput');
