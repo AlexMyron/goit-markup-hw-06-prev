@@ -13,6 +13,7 @@
 //   }
   
   function handleKeyUp(e) {
+    e.preventDefault();
     console.dir(e)
     
     document.getElementById('keyValue').innerText = 'Key: ' + e.keyCode;
